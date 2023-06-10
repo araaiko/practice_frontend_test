@@ -1,3 +1,4 @@
+/** 外部import */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -45,6 +46,7 @@ export const fetchAsyncGetProfile = createAsyncThunk(
   }
 );
 
+// slice
 export const authSlice = createSlice({
   name: "auth",
   initialState: {
@@ -54,6 +56,7 @@ export const authSlice = createSlice({
     },
   },
   reducers: {},
+  // 各非同期処理の後処理を記述
   extraReducers: (builder) => {
     // fetchAsyncLoginで取得したtokenをlocalStorageにセットする
     builder.addCase(fetchAsyncLogin.fulfilled, (state, action) => {
@@ -72,6 +75,7 @@ export const authSlice = createSlice({
   },
 });
 
+// ReactコンポーネントからReduxのstateを参照できるようにする
 export const selectProfile = (state) => state.auth.profile;
 
 export default authSlice.reducer;
