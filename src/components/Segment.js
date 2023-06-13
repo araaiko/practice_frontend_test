@@ -16,12 +16,10 @@ import {
 
 export const Segment = () => {
   const dispatch = useDispatch();
-
+  const [successMsg, setSuccessMeg] = useState("");
   // reduxのstateを参照できるようにする
   const segments = useSelector(selectSegments);
   const editedSegment = useSelector(selectEditedSegment);
-
-  const [successMsg, setSuccessMeg] = useState("");
 
   // segmentの入力欄のstate管理
   const onChangeToInput = async (e) => {
