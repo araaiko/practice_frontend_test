@@ -99,7 +99,7 @@ describe("Brand Component Test Cases", () => {
   });
 
   /** Brand一覧の表示 */
-  it("2 :Should render list of segments from REST API", async () => {
+  it("2 :Should render list of brands from REST API", async () => {
     // testing-libraryのrenderを使って、Brandコンポーネントの要素を取得
     render(
       <Provider store={store}>
