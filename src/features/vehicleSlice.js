@@ -118,7 +118,7 @@ export const fetchAsyncDeleteBrand = createAsyncThunk(
 );
 
 /** vehicle */
-// brand一覧を取得する(read)
+// vehicle一覧を取得する(read)
 export const fetchAsyncGetVehicles = createAsyncThunk(
   "vehicle/get",
   async () => {
